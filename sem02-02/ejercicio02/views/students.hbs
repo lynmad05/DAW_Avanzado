@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{{title}}</title>
+        <style>
+            .aprobado {
+                background-color: #90EE90;
+                font-weight: bold;
+            }
+            table {
+                border-collapse: collapse;
+                width: 50%;
+            }
+            th, td {
+                border: 1px solid black;
+                padding: 8px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>{{title}}</h1>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Nota</th>
+            </tr>
+            {{#each students}}
+                <tr {{#if (gt nota 15)}}class="aprobado"{{/if}}>
+                    <td>{{nombre}}</td>
+                    <td>{{nota}}</td>
+                </tr>
+            {{/each}}
+        </table>
+    </body>
+</html>
