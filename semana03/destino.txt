@@ -1,0 +1,4 @@
+Hola, este es un archivo de prueba.
+Aprendiendo sobre Streams en Node.js.
+Procesamiento eficiente de archivos.
+Finalizando el archivo de prueba.
