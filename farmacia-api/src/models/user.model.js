@@ -1,3 +1,4 @@
+//correción con el archivo.
 const { DataTypes } = require("sequelize");
 const sequelize = require("../config/db");
 
