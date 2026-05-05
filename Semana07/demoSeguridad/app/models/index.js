@@ -7,10 +7,17 @@ const sequelize = new Sequelize(
   dbConfig.PASSWORD,
   {
     host: dbConfig.HOST,
-    dialect: dbConfig.dialect
+    port: dbConfig.PORT,
+    dialect: dbConfig.dialect,
+    logging: false,
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false
+      }
+    }
   }
 );
-
 const db = {};
 
 db.Sequelize = Sequelize;
