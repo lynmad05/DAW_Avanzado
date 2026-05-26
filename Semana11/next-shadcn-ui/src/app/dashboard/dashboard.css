@@ -1,0 +1,135 @@
+/* --- LAYOUT PRINCIPAL --- */
+.dashboard {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2ff, #f5f3ff);
+  padding: 40px 20px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.dashboard-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  margin-bottom: 40px;
+}
+
+.dashboard-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #4f46e5;
+  letter-spacing: -0.02em;
+}
+
+.dashboard-subtitle {
+  color: #6b7280;
+  font-size: 1.1rem;
+  margin-top: 4px;
+}
+
+/* --- TABS (MENU SUPERIOR) --- */
+.tabs-bar {
+  display: flex !important;
+  flex-direction: row;
+  gap: 8px;
+  padding: 8px;
+  background: white !important;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  width: fit-content;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.tabs-bar button {
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  transition: all 0.2s ease;
+  background: transparent;
+  border: none;
+}
+
+.tabs-bar button[data-state="active"] {
+  background: #4f46e5 !important;
+  color: white !important;
+  box-shadow: 0 8px 20px rgba(79,70,229,0.3);
+}
+
+/* --- GRIDS Y CONTENIDO --- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.grid-simple {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* --- TARJETAS --- */
+.card {
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.hoverable:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+.card-value {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111827;
+}
+
+/* --- ELEMENTOS DE LISTA --- */
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid #f3f4f6;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  transition: background 0.2s;
+}
+
+.list-item:hover {
+  background: #f9fafb;
+}
+
+/* --- INPUTS --- */
+.input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 4px rgba(79,70,229,0.1);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+  .card-grid, .grid-simple {
+    grid-template-columns: 1fr;
+  }
+  
+  .tabs-bar {
+    width: 100%;
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+}

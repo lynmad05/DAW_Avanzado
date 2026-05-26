@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+/* BASE */
+@layer base {
+  body {
+    background-color: #f8fafc;
+    color: #0f172a;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+  }
+}
+
+/* UTILITIES SIMPLES SIN @apply (EVITA ERROR TURBOPACK) */
+.card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.btn {
+  background: #6d28d9;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 12px;
+}
+
+.btn:hover {
+  background: #5b21b6;
+}
